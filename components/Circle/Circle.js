@@ -1,4 +1,5 @@
 // Circle
+import { getRandomColor } from "../../utils/randomColor.js";
 
 function Circle() {
   const circle = document.createElement("div");
@@ -13,3 +14,14 @@ const circleElement = Circle();
 rootElement.appendChild(circleElement);
 
 export { Circle };
+
+// alternativ kann man Zeile 16 vor function schreiben und
+// Zeilen 12-14 in index.js schreiben als:
+
+// const root = document.getElementbyId("root");
+// const circle = Circle ();
+// const square = Square ();
+// const pentagon = Pentagon ();
+// root.append(circle, square, pentagon);
+
+// oder Zeile 21-24 weiter kürzen auf: root.append(Circle(), Square(), Pentagon());
