@@ -30,10 +30,14 @@ const squareElement = Square();
 rootElement.appendChild(squareElement);
 
 // Pentagon
-const pentagon = document.createElement("div");
-pentagon.classList.add("pentagon");
-pentagon.addEventListener("click", () => {
-  pentagon.style.backgroundColor = getRandomColor(); // hier wichtig: Funktion aufrufen ...() und Klammern nicht vergessen !
-});
+function Pentagon() {
+  const pentagon = document.createElement("div");
+  pentagon.classList.add("pentagon");
+  pentagon.addEventListener("click", () => {
+    pentagon.style.backgroundColor = getRandomColor(); // hier wichtig: Funktion aufrufen ...() und Klammern nicht vergessen !
+  });
+  return pentagon;
+}
 
-// root.append(circle, square, pentagon);
+const pentagonElement = Pentagon();
+rootElement.appendChild(pentagonElement);
