@@ -4,6 +4,7 @@ console.clear();
 
 const root = document.getElementById("root");
 
+// Circle
 function Circle() {
   const circle = document.createElement("div");
   circle.classList.add("circle");
@@ -16,12 +17,19 @@ const rootElement = document.getElementById("root");
 const circleElement = Circle();
 rootElement.appendChild(circleElement);
 
-const square = document.createElement("div");
-square.classList.add("square");
-square.addEventListener("click", () => {
-  square.style.backgroundColor = getRandomColor(); // hier wichtig: Funktion aufrufen ...() und Klammern nicht vergessen !
-});
+// Square
+function Square() {
+  const square = document.createElement("div");
+  square.classList.add("square");
+  square.addEventListener("click", () => {
+    square.style.backgroundColor = getRandomColor(); // hier wichtig: Funktion aufrufen ...() und Klammern nicht vergessen !
+  });
+  return square;
+}
+const squareElement = Square();
+rootElement.appendChild(squareElement);
 
+// Pentagon
 const pentagon = document.createElement("div");
 pentagon.classList.add("pentagon");
 pentagon.addEventListener("click", () => {
