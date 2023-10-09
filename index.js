@@ -1,21 +1,8 @@
 import { getRandomColor } from "./utils/randomColor.js";
-
+import { Circle } from "./components/Circle/Circle.js";
 console.clear();
 
 const root = document.getElementById("root");
-
-// Circle
-function Circle() {
-  const circle = document.createElement("div");
-  circle.classList.add("circle");
-  circle.addEventListener("click", () => {
-    circle.style.backgroundColor = getRandomColor(); // hier wichtig: Funktion aufrufen ...() und Klammern nicht vergessen !
-  });
-  return circle;
-}
-const rootElement = document.getElementById("root");
-const circleElement = Circle();
-rootElement.appendChild(circleElement);
 
 // Square
 function Square() {
@@ -26,6 +13,7 @@ function Square() {
   });
   return square;
 }
+// const rootElement = document.getElementById("root");
 const squareElement = Square();
 rootElement.appendChild(squareElement);
 
@@ -38,6 +26,6 @@ function Pentagon() {
   });
   return pentagon;
 }
-
+// const rootElement = document.getElementById("root");
 const pentagonElement = Pentagon();
 rootElement.appendChild(pentagonElement);
